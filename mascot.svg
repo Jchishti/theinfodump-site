@@ -1,61 +1,73 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 32" shape-rendering="crispEdges" aria-label="The InfoDump dump truck mascot">
-  <!-- Cargo bytes flying out of bed -->
+  <!-- Cargo bytes flying out of bed (now on the right) -->
   <g fill="#ffbe3c">
-    <rect x="10" y="2" width="2" height="2"/>
-    <rect x="20" y="0" width="2" height="2"/>
-    <rect x="30" y="4" width="2" height="2"/>
-    <rect x="40" y="2" width="2" height="2"/>
-  </g>
-  <g fill="#50d2be">
-    <rect x="14" y="4" width="2" height="2"/>
     <rect x="24" y="2" width="2" height="2"/>
     <rect x="34" y="0" width="2" height="2"/>
+    <rect x="44" y="4" width="2" height="2"/>
+    <rect x="54" y="2" width="2" height="2"/>
+  </g>
+  <g fill="#50d2be">
+    <rect x="28" y="4" width="2" height="2"/>
+    <rect x="38" y="2" width="2" height="2"/>
+    <rect x="48" y="0" width="2" height="2"/>
   </g>
 
-  <!-- Bed back wall + edge highlight -->
-  <rect x="4" y="8" width="2" height="14" fill="#50d2be"/>
-  <rect x="4" y="8" width="2" height="2" fill="#3aa090"/>
-  <!-- Bed front wall (against cab) + edge highlight -->
-  <rect x="42" y="8" width="2" height="14" fill="#50d2be"/>
-  <rect x="42" y="8" width="2" height="2" fill="#3aa090"/>
+  <!-- BED (right side) -->
+  <!-- Back wall (right edge) + edge highlight -->
+  <rect x="58" y="8" width="2" height="14" fill="#50d2be"/>
+  <rect x="58" y="8" width="2" height="2" fill="#3aa090"/>
+  <!-- Front wall (against cab) + edge highlight -->
+  <rect x="22" y="8" width="2" height="14" fill="#50d2be"/>
+  <rect x="22" y="8" width="2" height="2" fill="#3aa090"/>
   <!-- Bed floor -->
-  <rect x="4" y="20" width="40" height="2" fill="#50d2be"/>
+  <rect x="24" y="20" width="34" height="2" fill="#50d2be"/>
+  <!-- Cargo inside bed (chunky pile) -->
+  <rect x="26" y="14" width="4" height="6" fill="#3aa090"/>
+  <rect x="32" y="12" width="4" height="8" fill="#3aa090"/>
+  <rect x="38" y="14" width="4" height="6" fill="#3aa090"/>
+  <rect x="44" y="12" width="4" height="8" fill="#3aa090"/>
+  <rect x="50" y="14" width="4" height="6" fill="#3aa090"/>
 
-  <!-- Cargo inside bed -->
-  <rect x="8" y="14" width="4" height="6" fill="#3aa090"/>
-  <rect x="14" y="12" width="4" height="8" fill="#3aa090"/>
-  <rect x="20" y="14" width="4" height="6" fill="#3aa090"/>
-  <rect x="26" y="12" width="4" height="8" fill="#3aa090"/>
-  <rect x="32" y="14" width="4" height="6" fill="#3aa090"/>
-  <rect x="38" y="13" width="4" height="7" fill="#3aa090"/>
-
+  <!-- CAB (left side) -->
   <!-- Cab roof -->
-  <rect x="44" y="10" width="14" height="2" fill="#50d2be"/>
+  <rect x="4" y="10" width="16" height="2" fill="#50d2be"/>
   <!-- Cab body -->
-  <rect x="44" y="12" width="14" height="10" fill="#50d2be"/>
-  <!-- Cab window -->
-  <rect x="46" y="13" width="10" height="6" fill="#1a3d38"/>
+  <rect x="4" y="12" width="16" height="10" fill="#50d2be"/>
+  <!-- Windshield slope hint (small dark pixel above windshield front) -->
+  <rect x="6" y="11" width="2" height="1" fill="#1a3d38"/>
+  <!-- Window (large) -->
+  <rect x="6" y="13" width="12" height="6" fill="#1a3d38"/>
   <!-- Window highlights -->
-  <rect x="46" y="13" width="10" height="1" fill="#3aa090"/>
-  <rect x="46" y="13" width="1" height="6" fill="#3aa090"/>
+  <rect x="6" y="13" width="12" height="1" fill="#3aa090"/>
+  <rect x="6" y="13" width="1" height="6" fill="#3aa090"/>
+  <!-- Side mirror (sticking out front-left) -->
+  <rect x="2" y="13" width="2" height="2" fill="#50d2be"/>
+  <!-- Headlight (front of cab) -->
+  <rect x="4" y="16" width="2" height="2" fill="#ffbe3c"/>
+  <!-- Grille slits (front of cab, dark) -->
+  <rect x="4" y="19" width="2" height="1" fill="#1a3d38"/>
+  <rect x="4" y="21" width="2" height="1" fill="#1a3d38"/>
 
-  <!-- Chassis -->
-  <rect x="2" y="22" width="58" height="2" fill="#1a3d38"/>
+  <!-- FRONT BUMPER (extends out front-left, classic Tonka) -->
+  <rect x="0" y="20" width="6" height="2" fill="#3aa090"/>
+  <rect x="0" y="20" width="6" height="1" fill="#50d2be"/>
 
-  <!-- Headlight -->
-  <rect x="58" y="14" width="2" height="2" fill="#ffbe3c"/>
-  <!-- Front bumper -->
-  <rect x="58" y="20" width="2" height="2" fill="#3aa090"/>
+  <!-- CHASSIS -->
+  <rect x="0" y="22" width="60" height="2" fill="#1a3d38"/>
 
-  <!-- Left wheel -->
-  <rect x="10" y="24" width="8" height="6" fill="#000"/>
-  <rect x="11" y="23" width="6" height="1" fill="#000"/>
-  <rect x="11" y="30" width="6" height="1" fill="#000"/>
-  <rect x="13" y="26" width="2" height="2" fill="#50d2be"/>
+  <!-- FENDERS (chunky over-wheel arches) -->
+  <rect x="6" y="22" width="12" height="2" fill="#50d2be"/>
+  <rect x="40" y="22" width="14" height="2" fill="#50d2be"/>
 
-  <!-- Right wheel -->
-  <rect x="44" y="24" width="8" height="6" fill="#000"/>
-  <rect x="45" y="23" width="6" height="1" fill="#000"/>
-  <rect x="45" y="30" width="6" height="1" fill="#000"/>
-  <rect x="47" y="26" width="2" height="2" fill="#50d2be"/>
+  <!-- WHEELS -->
+  <!-- Front wheel (under cab) -->
+  <rect x="8" y="24" width="8" height="6" fill="#000"/>
+  <rect x="9" y="23" width="6" height="1" fill="#000"/>
+  <rect x="9" y="30" width="6" height="1" fill="#000"/>
+  <rect x="11" y="26" width="2" height="2" fill="#50d2be"/>
+  <!-- Rear wheel (under bed) -->
+  <rect x="42" y="24" width="8" height="6" fill="#000"/>
+  <rect x="43" y="23" width="6" height="1" fill="#000"/>
+  <rect x="43" y="30" width="6" height="1" fill="#000"/>
+  <rect x="45" y="26" width="2" height="2" fill="#50d2be"/>
 </svg>
