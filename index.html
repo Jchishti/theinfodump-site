@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>The InfoDump — Software made by people who won't shut up about it</title>
+  <meta name="description" content="The InfoDump is the studio behind Linear Timer+ and other small, useful, privacy-respecting software. Made by people who won't shut up about it.">
+  <meta property="og:title" content="The InfoDump">
+  <meta property="og:description" content="Software made by people who won't shut up about it.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://theinfodump.com/">
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <style>
+    :root {
+      --teal: #50d2be;
+      --amber: #ffbe3c;
+      --bg: #000;
+      --card: rgba(255,255,255,0.04);
+      --border: rgba(255,255,255,0.08);
+      --muted: rgba(255,255,255,0.5);
+      --faint: rgba(255,255,255,0.3);
+    }
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      background: var(--bg);
+      color: #fff;
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+      line-height: 1.6;
+      overflow-x: hidden;
+    }
+    a { color: var(--teal); text-decoration: none; transition: opacity 0.2s; }
+    a:hover { opacity: 0.8; }
+
+    /* Hero */
+    .hero {
+      text-align: center;
+      padding: 100px 20px 60px;
+      max-width: 720px;
+      margin: 0 auto;
+      position: relative;
+    }
+    .wordmark {
+      display: inline-block;
+      font-size: 14px;
+      font-weight: 700;
+      letter-spacing: 6px;
+      color: var(--teal);
+      margin-bottom: 32px;
+      padding: 8px 18px;
+      border: 1px solid rgba(80, 210, 190, 0.3);
+      border-radius: 100px;
+      box-shadow: 0 0 20px rgba(80, 210, 190, 0.15);
+    }
+    .hero h1 {
+      font-size: 56px;
+      font-weight: 900;
+      letter-spacing: -2px;
+      line-height: 1.05;
+      margin-bottom: 24px;
+    }
+    .hero h1 .accent {
+      color: var(--teal);
+      text-shadow: 0 0 40px rgba(80, 210, 190, 0.4);
+    }
+    .hero .tagline {
+      font-size: 18px;
+      color: var(--muted);
+      max-width: 520px;
+      margin: 0 auto;
+    }
+
+    /* Projects */
+    .projects {
+      max-width: 880px;
+      margin: 0 auto;
+      padding: 60px 20px 40px;
+    }
+    .section-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      margin-bottom: 32px;
+      padding: 0 4px;
+    }
+    .section-label {
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 4px;
+      color: var(--teal);
+      text-transform: uppercase;
+    }
+    .section-count {
+      font-size: 12px;
+      color: var(--faint);
+    }
+
+    .project-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 16px;
+    }
+    .project-card {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 20px;
+      padding: 24px;
+      display: flex;
+      flex-direction: column;
+      transition: transform 0.2s ease, border-color 0.2s ease;
+      text-decoration: none;
+      color: inherit;
+    }
+    .project-card:hover {
+      border-color: rgba(255,255,255,0.18);
+      transform: translateY(-2px);
+      text-decoration: none;
+    }
+    .project-card.live { cursor: pointer; }
+    .project-card.placeholder {
+      background: transparent;
+      border-style: dashed;
+      opacity: 0.55;
+    }
+
+    .project-head {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      margin-bottom: 14px;
+    }
+    .project-icon {
+      width: 56px;
+      height: 56px;
+      border-radius: 14px;
+      flex-shrink: 0;
+      background: rgba(255,255,255,0.05);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 24px;
+    }
+    .project-icon.linear-timer {
+      background: linear-gradient(135deg, #2a1f0a, #0e1f1c);
+      box-shadow: 0 0 24px rgba(255, 190, 60, 0.15);
+    }
+    .project-icon.linear-timer::after {
+      content: "";
+      width: 28px;
+      height: 28px;
+      border-radius: 50%;
+      border: 3px solid var(--amber);
+      border-right-color: transparent;
+      box-shadow: 0 0 12px rgba(255, 190, 60, 0.5);
+    }
+    .project-name {
+      font-size: 18px;
+      font-weight: 800;
+      letter-spacing: -0.3px;
+    }
+    .project-status {
+      display: inline-block;
+      font-size: 10px;
+      font-weight: 700;
+      letter-spacing: 2px;
+      padding: 3px 8px;
+      border-radius: 4px;
+      margin-top: 4px;
+    }
+    .project-status.live {
+      background: rgba(80, 210, 190, 0.15);
+      color: var(--teal);
+    }
+    .project-status.coming {
+      background: rgba(255, 255, 255, 0.06);
+      color: var(--faint);
+    }
+    .project-desc {
+      font-size: 14px;
+      color: var(--muted);
+      margin: 4px 0 18px;
+      line-height: 1.55;
+    }
+    .project-link {
+      font-size: 13px;
+      font-weight: 600;
+      color: var(--teal);
+      margin-top: auto;
+    }
+    .project-link::after {
+      content: " →";
+      transition: transform 0.2s ease;
+      display: inline-block;
+    }
+    .project-card:hover .project-link::after {
+      transform: translateX(3px);
+    }
+
+    /* About */
+    .about {
+      max-width: 720px;
+      margin: 0 auto;
+      padding: 60px 20px;
+    }
+    .about-content {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 24px;
+      padding: 40px;
+    }
+    .about h2 {
+      font-size: 28px;
+      font-weight: 800;
+      letter-spacing: -0.5px;
+      margin-bottom: 20px;
+    }
+    .about h2 .accent { color: var(--teal); }
+    .about p {
+      font-size: 16px;
+      color: var(--muted);
+      margin-bottom: 14px;
+    }
+    .about p:last-child { margin-bottom: 0; }
+    .about strong { color: rgba(255,255,255,0.85); font-weight: 600; }
+
+    /* Footer */
+    footer {
+      text-align: center;
+      padding: 60px 20px 40px;
+      color: var(--faint);
+      font-size: 13px;
+      border-top: 1px solid var(--border);
+      max-width: 720px;
+      margin: 40px auto 0;
+    }
+    footer .links {
+      display: flex;
+      justify-content: center;
+      gap: 24px;
+      margin-bottom: 16px;
+      flex-wrap: wrap;
+    }
+    footer a { color: var(--muted); }
+    footer .copy { font-size: 12px; color: rgba(255,255,255,0.25); }
+
+    /* Mobile */
+    @media (max-width: 600px) {
+      .hero { padding: 60px 20px 40px; }
+      .hero h1 { font-size: 38px; letter-spacing: -1px; }
+      .hero .tagline { font-size: 16px; }
+      .about-content { padding: 28px; }
+      .about h2 { font-size: 24px; }
+    }
+  </style>
+</head>
+<body>
+
+  <main>
+    <section class="hero">
+      <div class="wordmark">THE INFODUMP</div>
+      <h1>Software made by people who <span class="accent">won't shut up</span> about it.</h1>
+      <p class="tagline">A small, opinionated studio building little tools for focus, routine, and getting unstuck.</p>
+    </section>
+
+    <section class="projects" id="projects">
+      <div class="section-header">
+        <span class="section-label">Projects</span>
+        <span class="section-count">1 shipping · more on the way</span>
+      </div>
+
+      <div class="project-grid">
+        <a href="https://lineartimer.com" class="project-card live" target="_blank" rel="noopener">
+          <div class="project-head">
+            <div class="project-icon linear-timer"></div>
+            <div>
+              <div class="project-name">Linear Timer+</div>
+              <span class="project-status live">SHIPPING</span>
+            </div>
+          </div>
+          <p class="project-desc">A beautifully minimal interval timer with Pomodoro, presets, scheduling, and break reminders. iOS, Chrome, Android.</p>
+          <span class="project-link">Visit lineartimer.com</span>
+        </a>
+
+        <div class="project-card placeholder">
+          <div class="project-head">
+            <div class="project-icon">·</div>
+            <div>
+              <div class="project-name">Something next</div>
+              <span class="project-status coming">IN THE OVEN</span>
+            </div>
+          </div>
+          <p class="project-desc">More small, useful things in progress. We won't shut up about them when they're ready.</p>
+          <span class="project-link" style="opacity:0.4">Soon</span>
+        </div>
+      </div>
+    </section>
+
+    <section class="about" id="about">
+      <div class="about-content">
+        <h2>What is <span class="accent">The InfoDump</span>?</h2>
+        <p>The InfoDump is a small studio that makes <strong>tiny, useful, privacy-respecting software</strong> — apps and tools we wanted to exist and built ourselves.</p>
+        <p>We don't track you. We don't sell your data. We don't run ads. We just make stuff and won't shut up about it until we get it right.</p>
+        <p>If that sounds like your speed, <a href="mailto:contact@theinfodump.com">say hi</a>.</p>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="links">
+      <a href="#projects">Projects</a>
+      <a href="#about">About</a>
+      <a href="mailto:contact@theinfodump.com">Contact</a>
+      <a href="https://lineartimer.com" target="_blank" rel="noopener">Linear Timer+</a>
+    </div>
+    <p class="copy">&copy; 2026 The InfoDump LLC · An Oregon LLC</p>
+  </footer>
+
+</body>
+</html>
