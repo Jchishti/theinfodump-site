@@ -1,5 +1,22 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
-  <rect width="64" height="64" rx="14" fill="#000"/>
-  <circle cx="32" cy="32" r="18" fill="none" stroke="#50d2be" stroke-width="4" stroke-linecap="round" stroke-dasharray="80 30" transform="rotate(-90 32 32)"/>
-  <circle cx="32" cy="32" r="4" fill="#50d2be"/>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" shape-rendering="crispEdges">
+  <rect width="32" height="32" rx="6" fill="#000"/>
+  <!-- Bed back wall -->
+  <rect x="4" y="11" width="2" height="11" fill="#50d2be"/>
+  <!-- Bed front wall -->
+  <rect x="20" y="11" width="2" height="11" fill="#50d2be"/>
+  <!-- Bed floor -->
+  <rect x="4" y="20" width="18" height="2" fill="#50d2be"/>
+  <!-- Cab body -->
+  <rect x="22" y="13" width="6" height="9" fill="#50d2be"/>
+  <!-- Window -->
+  <rect x="23" y="14" width="4" height="3" fill="#1a3d38"/>
+  <!-- Wheels -->
+  <rect x="6" y="22" width="4" height="4" fill="#50d2be"/>
+  <rect x="22" y="22" width="4" height="4" fill="#50d2be"/>
+  <!-- Headlight -->
+  <rect x="28" y="15" width="1" height="1" fill="#ffbe3c"/>
+  <!-- Cargo bytes -->
+  <rect x="9" y="6" width="2" height="2" fill="#ffbe3c"/>
+  <rect x="14" y="4" width="2" height="2" fill="#50d2be"/>
+  <rect x="19" y="6" width="2" height="2" fill="#ffbe3c"/>
 </svg>

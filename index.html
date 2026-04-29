@@ -32,6 +32,65 @@
     a { color: var(--teal); text-decoration: none; transition: opacity 0.2s; }
     a:hover { opacity: 0.8; }
 
+    /* Mascot */
+    .mascot {
+      image-rendering: pixelated;
+      image-rendering: -moz-crisp-edges;
+      image-rendering: crisp-edges;
+      display: block;
+    }
+    .mascot-hero {
+      width: 200px;
+      height: auto;
+      margin: 0 auto 28px;
+      animation: idle 1.6s ease-in-out infinite;
+      filter: drop-shadow(0 6px 0 rgba(80, 210, 190, 0.08));
+      cursor: pointer;
+    }
+    .mascot-hero .cargo-amber rect,
+    .mascot-hero .cargo-teal rect {
+      animation: float-up 2.4s ease-in-out infinite;
+      transform-box: fill-box;
+    }
+    .mascot-hero .cargo-amber rect:nth-child(2) { animation-delay: 0.4s; }
+    .mascot-hero .cargo-amber rect:nth-child(3) { animation-delay: 0.8s; }
+    .mascot-hero .cargo-amber rect:nth-child(4) { animation-delay: 1.2s; }
+    .mascot-hero .cargo-teal rect:nth-child(1) { animation-delay: 0.2s; }
+    .mascot-hero .cargo-teal rect:nth-child(2) { animation-delay: 0.6s; }
+    .mascot-hero .cargo-teal rect:nth-child(3) { animation-delay: 1.0s; }
+    .mascot-hero:hover {
+      animation-duration: 0.4s;
+    }
+    .mascot-hero:hover .cargo-amber rect,
+    .mascot-hero:hover .cargo-teal rect {
+      animation-duration: 0.8s;
+    }
+    .mascot-foot {
+      width: 56px;
+      height: auto;
+      vertical-align: middle;
+      margin-right: 10px;
+      opacity: 0.6;
+      transition: opacity 0.2s;
+    }
+    .mascot-foot:hover { opacity: 1; }
+
+    @keyframes idle {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-3px); }
+    }
+    @keyframes float-up {
+      0% { transform: translateY(0); opacity: 0; }
+      20% { opacity: 1; }
+      80% { opacity: 1; }
+      100% { transform: translateY(-12px); opacity: 0; }
+    }
+    @media (prefers-reduced-motion: reduce) {
+      .mascot-hero,
+      .mascot-hero .cargo-amber rect,
+      .mascot-hero .cargo-teal rect { animation: none; }
+    }
+
     /* Hero */
     .hero {
       text-align: center;
@@ -257,6 +316,60 @@
 
   <main>
     <section class="hero">
+      <svg class="mascot mascot-hero" viewBox="0 0 64 32" xmlns="http://www.w3.org/2000/svg" shape-rendering="crispEdges" aria-label="The InfoDump dump truck mascot">
+        <!-- Cargo bytes flying out -->
+        <g class="cargo-amber" fill="#ffbe3c">
+          <rect x="10" y="2" width="2" height="2"/>
+          <rect x="20" y="0" width="2" height="2"/>
+          <rect x="30" y="4" width="2" height="2"/>
+          <rect x="40" y="2" width="2" height="2"/>
+        </g>
+        <g class="cargo-teal" fill="#50d2be">
+          <rect x="14" y="4" width="2" height="2"/>
+          <rect x="24" y="2" width="2" height="2"/>
+          <rect x="34" y="0" width="2" height="2"/>
+        </g>
+        <!-- Bed back wall + edge highlight -->
+        <rect x="4" y="8" width="2" height="14" fill="#50d2be"/>
+        <rect x="4" y="8" width="2" height="2" fill="#3aa090"/>
+        <!-- Bed front wall (against cab) + edge highlight -->
+        <rect x="42" y="8" width="2" height="14" fill="#50d2be"/>
+        <rect x="42" y="8" width="2" height="2" fill="#3aa090"/>
+        <!-- Bed floor -->
+        <rect x="4" y="20" width="40" height="2" fill="#50d2be"/>
+        <!-- Cargo inside bed -->
+        <rect x="8" y="14" width="4" height="6" fill="#3aa090"/>
+        <rect x="14" y="12" width="4" height="8" fill="#3aa090"/>
+        <rect x="20" y="14" width="4" height="6" fill="#3aa090"/>
+        <rect x="26" y="12" width="4" height="8" fill="#3aa090"/>
+        <rect x="32" y="14" width="4" height="6" fill="#3aa090"/>
+        <rect x="38" y="13" width="4" height="7" fill="#3aa090"/>
+        <!-- Cab roof -->
+        <rect x="44" y="10" width="14" height="2" fill="#50d2be"/>
+        <!-- Cab body -->
+        <rect x="44" y="12" width="14" height="10" fill="#50d2be"/>
+        <!-- Cab window -->
+        <rect x="46" y="13" width="10" height="6" fill="#1a3d38"/>
+        <!-- Window highlights -->
+        <rect x="46" y="13" width="10" height="1" fill="#3aa090"/>
+        <rect x="46" y="13" width="1" height="6" fill="#3aa090"/>
+        <!-- Chassis -->
+        <rect x="2" y="22" width="58" height="2" fill="#1a3d38"/>
+        <!-- Headlight -->
+        <rect x="58" y="14" width="2" height="2" fill="#ffbe3c"/>
+        <!-- Front bumper -->
+        <rect x="58" y="20" width="2" height="2" fill="#3aa090"/>
+        <!-- Left wheel -->
+        <rect x="10" y="24" width="8" height="6" fill="#000"/>
+        <rect x="11" y="23" width="6" height="1" fill="#000"/>
+        <rect x="11" y="30" width="6" height="1" fill="#000"/>
+        <rect x="13" y="26" width="2" height="2" fill="#50d2be"/>
+        <!-- Right wheel -->
+        <rect x="44" y="24" width="8" height="6" fill="#000"/>
+        <rect x="45" y="23" width="6" height="1" fill="#000"/>
+        <rect x="45" y="30" width="6" height="1" fill="#000"/>
+        <rect x="47" y="26" width="2" height="2" fill="#50d2be"/>
+      </svg>
       <div class="wordmark">THE INFODUMP</div>
       <h1>Software made by people who <span class="accent">won't shut up</span> about it.</h1>
       <p class="tagline">An independent, opinionated studio making tools, games, and software that actually make life better.</p>
@@ -312,7 +425,25 @@
       <a href="mailto:contact@theinfodump.com">Contact</a>
       <a href="https://lineartimer.com" target="_blank" rel="noopener">Linear Timer+</a>
     </div>
-    <p class="copy">&copy; 2026 The InfoDump LLC · An Oregon LLC</p>
+    <p class="copy">
+      <svg class="mascot mascot-foot" viewBox="0 0 64 32" xmlns="http://www.w3.org/2000/svg" shape-rendering="crispEdges" aria-hidden="true">
+        <rect x="4" y="8" width="2" height="14" fill="#50d2be"/>
+        <rect x="42" y="8" width="2" height="14" fill="#50d2be"/>
+        <rect x="4" y="20" width="40" height="2" fill="#50d2be"/>
+        <rect x="44" y="10" width="14" height="2" fill="#50d2be"/>
+        <rect x="44" y="12" width="14" height="10" fill="#50d2be"/>
+        <rect x="46" y="13" width="10" height="6" fill="#1a3d38"/>
+        <rect x="2" y="22" width="58" height="2" fill="#1a3d38"/>
+        <rect x="58" y="14" width="2" height="2" fill="#ffbe3c"/>
+        <rect x="10" y="24" width="8" height="6" fill="#000"/>
+        <rect x="11" y="23" width="6" height="1" fill="#000"/>
+        <rect x="11" y="30" width="6" height="1" fill="#000"/>
+        <rect x="44" y="24" width="8" height="6" fill="#000"/>
+        <rect x="45" y="23" width="6" height="1" fill="#000"/>
+        <rect x="45" y="30" width="6" height="1" fill="#000"/>
+      </svg>
+      &copy; 2026 The InfoDump LLC · An Oregon LLC
+    </p>
   </footer>
 
 </body>
