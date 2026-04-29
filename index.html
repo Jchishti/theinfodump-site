@@ -40,7 +40,7 @@
       display: block;
     }
     .mascot-hero {
-      width: 200px;
+      width: 280px;
       height: auto;
       margin: 0 auto 28px;
       animation: idle 1.6s ease-in-out infinite;
@@ -66,7 +66,7 @@
       animation-duration: 0.8s;
     }
     .mascot-foot {
-      width: 56px;
+      width: 72px;
       height: auto;
       vertical-align: middle;
       margin-right: 10px;
@@ -316,65 +316,93 @@
 
   <main>
     <section class="hero">
-      <svg class="mascot mascot-hero" viewBox="0 0 64 32" xmlns="http://www.w3.org/2000/svg" shape-rendering="crispEdges" aria-label="The InfoDump dump truck mascot">
-        <!-- Cargo bytes flying out (bed is on the right) -->
+      <svg class="mascot mascot-hero" viewBox="0 0 96 48" xmlns="http://www.w3.org/2000/svg" shape-rendering="crispEdges" aria-label="The InfoDump dump truck mascot">
+        <!-- Cargo bytes flying out -->
         <g class="cargo-amber" fill="#ffbe3c">
-          <rect x="24" y="2" width="2" height="2"/>
-          <rect x="34" y="0" width="2" height="2"/>
-          <rect x="44" y="4" width="2" height="2"/>
-          <rect x="54" y="2" width="2" height="2"/>
+          <rect x="40" y="2" width="2" height="2"/>
+          <rect x="50" y="0" width="2" height="2"/>
+          <rect x="62" y="2" width="2" height="2"/>
+          <rect x="74" y="0" width="2" height="2"/>
         </g>
-        <g class="cargo-teal" fill="#50d2be">
-          <rect x="28" y="4" width="2" height="2"/>
-          <rect x="38" y="2" width="2" height="2"/>
-          <rect x="48" y="0" width="2" height="2"/>
+        <g class="cargo-teal" fill="#7fe8d6">
+          <rect x="46" y="2" width="2" height="2"/>
+          <rect x="58" y="0" width="2" height="2"/>
+          <rect x="70" y="2" width="2" height="2"/>
         </g>
-        <!-- BED (right) -->
-        <rect x="58" y="8" width="2" height="14" fill="#50d2be"/>
-        <rect x="58" y="8" width="2" height="2" fill="#3aa090"/>
-        <rect x="22" y="8" width="2" height="14" fill="#50d2be"/>
-        <rect x="22" y="8" width="2" height="2" fill="#3aa090"/>
-        <rect x="24" y="20" width="34" height="2" fill="#50d2be"/>
-        <!-- Cargo inside bed -->
-        <rect x="26" y="14" width="4" height="6" fill="#3aa090"/>
-        <rect x="32" y="12" width="4" height="8" fill="#3aa090"/>
-        <rect x="38" y="14" width="4" height="6" fill="#3aa090"/>
-        <rect x="44" y="12" width="4" height="8" fill="#3aa090"/>
-        <rect x="50" y="14" width="4" height="6" fill="#3aa090"/>
-        <!-- CAB (left) -->
-        <rect x="4" y="10" width="16" height="2" fill="#50d2be"/>
-        <rect x="4" y="12" width="16" height="10" fill="#50d2be"/>
-        <!-- Windshield slope hint -->
-        <rect x="6" y="11" width="2" height="1" fill="#1a3d38"/>
+        <!-- Cargo pile peeking above bed wall -->
+        <rect x="42" y="6" width="6" height="6" fill="#3aa090"/>
+        <rect x="42" y="6" width="6" height="1" fill="#50d2be"/>
+        <rect x="50" y="4" width="6" height="8" fill="#3aa090"/>
+        <rect x="50" y="4" width="6" height="1" fill="#50d2be"/>
+        <rect x="58" y="2" width="6" height="10" fill="#3aa090"/>
+        <rect x="58" y="2" width="6" height="1" fill="#50d2be"/>
+        <rect x="66" y="6" width="6" height="6" fill="#3aa090"/>
+        <rect x="66" y="6" width="6" height="1" fill="#50d2be"/>
+        <rect x="74" y="4" width="6" height="8" fill="#3aa090"/>
+        <rect x="74" y="4" width="6" height="1" fill="#50d2be"/>
+        <rect x="82" y="6" width="6" height="6" fill="#3aa090"/>
+        <rect x="82" y="6" width="6" height="1" fill="#50d2be"/>
+        <!-- BED -->
+        <rect x="36" y="10" width="56" height="22" fill="#0a1f1c"/>
+        <rect x="38" y="12" width="52" height="18" fill="#50d2be"/>
+        <rect x="38" y="12" width="52" height="2" fill="#7fe8d6"/>
+        <rect x="88" y="14" width="2" height="14" fill="#3aa090"/>
+        <rect x="38" y="28" width="52" height="2" fill="#3aa090"/>
+        <!-- CAB -->
+        <rect x="4" y="12" width="32" height="20" fill="#0a1f1c"/>
+        <rect x="6" y="14" width="28" height="16" fill="#50d2be"/>
+        <rect x="6" y="14" width="28" height="2" fill="#7fe8d6"/>
+        <rect x="32" y="16" width="2" height="14" fill="#3aa090"/>
+        <rect x="6" y="28" width="28" height="2" fill="#3aa090"/>
         <!-- Window -->
-        <rect x="6" y="13" width="12" height="6" fill="#1a3d38"/>
-        <rect x="6" y="13" width="12" height="1" fill="#3aa090"/>
-        <rect x="6" y="13" width="1" height="6" fill="#3aa090"/>
+        <rect x="10" y="16" width="20" height="10" fill="#0a1f1c"/>
+        <rect x="11" y="17" width="18" height="8" fill="#2a4a45"/>
+        <rect x="12" y="18" width="4" height="1" fill="#7fe8d6"/>
+        <rect x="13" y="19" width="4" height="1" fill="#7fe8d6"/>
+        <rect x="22" y="18" width="3" height="1" fill="#7fe8d6"/>
+        <rect x="23" y="19" width="3" height="1" fill="#7fe8d6"/>
         <!-- Side mirror -->
-        <rect x="2" y="13" width="2" height="2" fill="#50d2be"/>
+        <rect x="2" y="18" width="2" height="4" fill="#0a1f1c"/>
+        <rect x="2" y="19" width="2" height="2" fill="#50d2be"/>
+        <rect x="2" y="19" width="2" height="1" fill="#7fe8d6"/>
         <!-- Headlight -->
-        <rect x="4" y="16" width="2" height="2" fill="#ffbe3c"/>
-        <!-- Grille slits -->
-        <rect x="4" y="19" width="2" height="1" fill="#1a3d38"/>
-        <rect x="4" y="21" width="2" height="1" fill="#1a3d38"/>
-        <!-- FRONT BUMPER -->
-        <rect x="0" y="20" width="6" height="2" fill="#3aa090"/>
-        <rect x="0" y="20" width="6" height="1" fill="#50d2be"/>
-        <!-- CHASSIS -->
-        <rect x="0" y="22" width="60" height="2" fill="#1a3d38"/>
-        <!-- FENDERS -->
-        <rect x="6" y="22" width="12" height="2" fill="#50d2be"/>
-        <rect x="40" y="22" width="14" height="2" fill="#50d2be"/>
-        <!-- Front wheel -->
-        <rect x="8" y="24" width="8" height="6" fill="#000"/>
-        <rect x="9" y="23" width="6" height="1" fill="#000"/>
-        <rect x="9" y="30" width="6" height="1" fill="#000"/>
-        <rect x="11" y="26" width="2" height="2" fill="#50d2be"/>
-        <!-- Rear wheel -->
-        <rect x="42" y="24" width="8" height="6" fill="#000"/>
-        <rect x="43" y="23" width="6" height="1" fill="#000"/>
-        <rect x="43" y="30" width="6" height="1" fill="#000"/>
-        <rect x="45" y="26" width="2" height="2" fill="#50d2be"/>
+        <rect x="4" y="22" width="2" height="3" fill="#0a1f1c"/>
+        <rect x="4" y="23" width="2" height="2" fill="#ffbe3c"/>
+        <rect x="4" y="23" width="2" height="1" fill="#fff5cc"/>
+        <!-- Grille -->
+        <rect x="4" y="25" width="4" height="3" fill="#0a1f1c"/>
+        <rect x="4" y="26" width="4" height="1" fill="#3aa090"/>
+        <!-- Front bumper -->
+        <rect x="0" y="28" width="8" height="4" fill="#0a1f1c"/>
+        <rect x="0" y="29" width="8" height="2" fill="#3aa090"/>
+        <rect x="0" y="29" width="8" height="1" fill="#7fe8d6"/>
+        <!-- Chassis -->
+        <rect x="4" y="32" width="86" height="2" fill="#0a1f1c"/>
+        <!-- Fenders -->
+        <rect x="10" y="32" width="14" height="2" fill="#50d2be"/>
+        <rect x="10" y="32" width="14" height="1" fill="#7fe8d6"/>
+        <rect x="64" y="32" width="18" height="2" fill="#50d2be"/>
+        <rect x="64" y="32" width="18" height="1" fill="#7fe8d6"/>
+        <!-- Front wheel (octagonal, teal with black hub) -->
+        <rect x="12" y="34" width="10" height="10" fill="#0a1f1c"/>
+        <rect x="14" y="33" width="6" height="1" fill="#0a1f1c"/>
+        <rect x="14" y="44" width="6" height="1" fill="#0a1f1c"/>
+        <rect x="11" y="36" width="1" height="6" fill="#0a1f1c"/>
+        <rect x="22" y="36" width="1" height="6" fill="#0a1f1c"/>
+        <rect x="14" y="36" width="6" height="6" fill="#50d2be"/>
+        <rect x="14" y="36" width="6" height="1" fill="#7fe8d6"/>
+        <rect x="14" y="41" width="6" height="1" fill="#3aa090"/>
+        <rect x="16" y="38" width="2" height="2" fill="#0a1f1c"/>
+        <!-- Rear wheel (octagonal, teal with black hub) -->
+        <rect x="68" y="34" width="10" height="10" fill="#0a1f1c"/>
+        <rect x="70" y="33" width="6" height="1" fill="#0a1f1c"/>
+        <rect x="70" y="44" width="6" height="1" fill="#0a1f1c"/>
+        <rect x="67" y="36" width="1" height="6" fill="#0a1f1c"/>
+        <rect x="78" y="36" width="1" height="6" fill="#0a1f1c"/>
+        <rect x="70" y="36" width="6" height="6" fill="#50d2be"/>
+        <rect x="70" y="36" width="6" height="1" fill="#7fe8d6"/>
+        <rect x="70" y="41" width="6" height="1" fill="#3aa090"/>
+        <rect x="72" y="38" width="2" height="2" fill="#0a1f1c"/>
       </svg>
       <div class="wordmark">THE INFODUMP</div>
       <h1>Software made by people who <span class="accent">won't shut up</span> about it.</h1>
@@ -432,31 +460,31 @@
       <a href="https://lineartimer.com" target="_blank" rel="noopener">Linear Timer+</a>
     </div>
     <p class="copy">
-      <svg class="mascot mascot-foot" viewBox="0 0 64 32" xmlns="http://www.w3.org/2000/svg" shape-rendering="crispEdges" aria-hidden="true">
-        <!-- Bed walls -->
-        <rect x="58" y="8" width="2" height="14" fill="#50d2be"/>
-        <rect x="22" y="8" width="2" height="14" fill="#50d2be"/>
-        <rect x="24" y="20" width="34" height="2" fill="#50d2be"/>
+      <svg class="mascot mascot-foot" viewBox="0 0 96 48" xmlns="http://www.w3.org/2000/svg" shape-rendering="crispEdges" aria-hidden="true">
+        <!-- Bed -->
+        <rect x="36" y="10" width="56" height="22" fill="#0a1f1c"/>
+        <rect x="38" y="12" width="52" height="18" fill="#50d2be"/>
+        <rect x="38" y="12" width="52" height="2" fill="#7fe8d6"/>
         <!-- Cab -->
-        <rect x="4" y="10" width="16" height="2" fill="#50d2be"/>
-        <rect x="4" y="12" width="16" height="10" fill="#50d2be"/>
-        <rect x="6" y="13" width="12" height="6" fill="#1a3d38"/>
-        <rect x="2" y="13" width="2" height="2" fill="#50d2be"/>
+        <rect x="4" y="12" width="32" height="20" fill="#0a1f1c"/>
+        <rect x="6" y="14" width="28" height="16" fill="#50d2be"/>
+        <rect x="6" y="14" width="28" height="2" fill="#7fe8d6"/>
+        <rect x="10" y="16" width="20" height="10" fill="#0a1f1c"/>
+        <rect x="11" y="17" width="18" height="8" fill="#2a4a45"/>
         <!-- Bumper -->
-        <rect x="0" y="20" width="6" height="2" fill="#50d2be"/>
-        <!-- Chassis + fenders -->
-        <rect x="0" y="22" width="60" height="2" fill="#1a3d38"/>
-        <rect x="6" y="22" width="12" height="2" fill="#50d2be"/>
-        <rect x="40" y="22" width="14" height="2" fill="#50d2be"/>
+        <rect x="0" y="28" width="8" height="4" fill="#0a1f1c"/>
+        <rect x="0" y="29" width="8" height="2" fill="#50d2be"/>
+        <!-- Chassis -->
+        <rect x="4" y="32" width="86" height="2" fill="#0a1f1c"/>
         <!-- Headlight -->
-        <rect x="4" y="16" width="2" height="2" fill="#ffbe3c"/>
+        <rect x="4" y="23" width="2" height="2" fill="#ffbe3c"/>
         <!-- Wheels -->
-        <rect x="8" y="24" width="8" height="6" fill="#000"/>
-        <rect x="9" y="23" width="6" height="1" fill="#000"/>
-        <rect x="9" y="30" width="6" height="1" fill="#000"/>
-        <rect x="42" y="24" width="8" height="6" fill="#000"/>
-        <rect x="43" y="23" width="6" height="1" fill="#000"/>
-        <rect x="43" y="30" width="6" height="1" fill="#000"/>
+        <rect x="12" y="34" width="10" height="10" fill="#0a1f1c"/>
+        <rect x="14" y="36" width="6" height="6" fill="#50d2be"/>
+        <rect x="16" y="38" width="2" height="2" fill="#0a1f1c"/>
+        <rect x="68" y="34" width="10" height="10" fill="#0a1f1c"/>
+        <rect x="70" y="36" width="6" height="6" fill="#50d2be"/>
+        <rect x="72" y="38" width="2" height="2" fill="#0a1f1c"/>
       </svg>
       &copy; 2026 The InfoDump LLC · An Oregon LLC
     </p>
