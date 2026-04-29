@@ -1,30 +1,38 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 96 48" shape-rendering="crispEdges" aria-label="The InfoDump dump truck mascot">
-  <!-- Cargo bytes flying out -->
+  <!-- Cargo bytes flying out of bed -->
   <g fill="#ffbe3c">
-    <rect x="40" y="2" width="2" height="2"/>
-    <rect x="50" y="0" width="2" height="2"/>
-    <rect x="62" y="2" width="2" height="2"/>
-    <rect x="74" y="0" width="2" height="2"/>
+    <rect x="44" y="2" width="2" height="2"/>
+    <rect x="54" y="0" width="2" height="2"/>
+    <rect x="66" y="2" width="2" height="2"/>
+    <rect x="78" y="0" width="2" height="2"/>
   </g>
   <g fill="#7fe8d6">
-    <rect x="46" y="2" width="2" height="2"/>
-    <rect x="58" y="0" width="2" height="2"/>
-    <rect x="70" y="2" width="2" height="2"/>
+    <rect x="50" y="2" width="2" height="2"/>
+    <rect x="62" y="0" width="2" height="2"/>
+    <rect x="74" y="2" width="2" height="2"/>
+  </g>
+
+  <!-- Smoke puffs (above smokestack) -->
+  <g fill="#666">
+    <rect x="22" y="0" width="2" height="2"/>
+  </g>
+  <g fill="#444">
+    <rect x="20" y="0" width="2" height="2"/>
   </g>
 
   <!-- Cargo pile peeking above bed wall -->
-  <rect x="42" y="6" width="6" height="6" fill="#3aa090"/>
-  <rect x="42" y="6" width="6" height="1" fill="#50d2be"/>
-  <rect x="50" y="4" width="6" height="8" fill="#3aa090"/>
-  <rect x="50" y="4" width="6" height="1" fill="#50d2be"/>
-  <rect x="58" y="2" width="6" height="10" fill="#3aa090"/>
-  <rect x="58" y="2" width="6" height="1" fill="#50d2be"/>
-  <rect x="66" y="6" width="6" height="6" fill="#3aa090"/>
-  <rect x="66" y="6" width="6" height="1" fill="#50d2be"/>
-  <rect x="74" y="4" width="6" height="8" fill="#3aa090"/>
-  <rect x="74" y="4" width="6" height="1" fill="#50d2be"/>
-  <rect x="82" y="6" width="6" height="6" fill="#3aa090"/>
-  <rect x="82" y="6" width="6" height="1" fill="#50d2be"/>
+  <rect x="44" y="6" width="6" height="6" fill="#3aa090"/>
+  <rect x="44" y="6" width="6" height="1" fill="#50d2be"/>
+  <rect x="52" y="4" width="6" height="8" fill="#3aa090"/>
+  <rect x="52" y="4" width="6" height="1" fill="#50d2be"/>
+  <rect x="60" y="6" width="6" height="6" fill="#3aa090"/>
+  <rect x="60" y="6" width="6" height="1" fill="#50d2be"/>
+  <rect x="68" y="4" width="6" height="8" fill="#3aa090"/>
+  <rect x="68" y="4" width="6" height="1" fill="#50d2be"/>
+  <rect x="76" y="6" width="6" height="6" fill="#3aa090"/>
+  <rect x="76" y="6" width="6" height="1" fill="#50d2be"/>
+  <rect x="84" y="4" width="6" height="8" fill="#3aa090"/>
+  <rect x="84" y="4" width="6" height="1" fill="#50d2be"/>
 
   <!-- BED -->
   <rect x="36" y="10" width="56" height="22" fill="#0a1f1c"/>
@@ -70,13 +78,25 @@
   <!-- Chassis -->
   <rect x="4" y="32" width="86" height="2" fill="#0a1f1c"/>
 
+  <!-- SMOKESTACK (drawn after cab so it sits on top) -->
+  <rect x="21" y="2" width="4" height="2" fill="#0a1f1c"/>
+  <rect x="21" y="2" width="4" height="1" fill="#1a3d38"/>
+  <rect x="22" y="4" width="2" height="10" fill="#1a3d38"/>
+  <rect x="22" y="4" width="1" height="10" fill="#3aa090"/>
+
+  <!-- BED HEADBOARD (overhangs cab) -->
+  <rect x="28" y="4" width="12" height="8" fill="#0a1f1c"/>
+  <rect x="30" y="6" width="8" height="4" fill="#50d2be"/>
+  <rect x="30" y="6" width="8" height="1" fill="#7fe8d6"/>
+  <rect x="30" y="9" width="8" height="1" fill="#3aa090"/>
+
   <!-- Fenders -->
   <rect x="10" y="32" width="14" height="2" fill="#50d2be"/>
   <rect x="10" y="32" width="14" height="1" fill="#7fe8d6"/>
   <rect x="56" y="32" width="30" height="2" fill="#50d2be"/>
   <rect x="56" y="32" width="30" height="1" fill="#7fe8d6"/>
 
-  <!-- Front wheel: 3-tone tire (teal highlight, mid, dark shadow) with teal rim and dark hub -->
+  <!-- Front wheel -->
   <rect x="14" y="33" width="6" height="1" fill="#3aa090"/>
   <rect x="12" y="34" width="10" height="9" fill="#2a4a45"/>
   <rect x="11" y="36" width="1" height="6" fill="#2a4a45"/>
@@ -88,7 +108,7 @@
   <rect x="14" y="41" width="6" height="1" fill="#3aa090"/>
   <rect x="16" y="38" width="2" height="2" fill="#0a1f1c"/>
 
-  <!-- Rear wheel 1 (tandem, front of pair) -->
+  <!-- Rear wheel 1 (tandem, front) -->
   <rect x="62" y="33" width="6" height="1" fill="#3aa090"/>
   <rect x="60" y="34" width="10" height="9" fill="#2a4a45"/>
   <rect x="59" y="36" width="1" height="6" fill="#2a4a45"/>
@@ -100,7 +120,7 @@
   <rect x="62" y="41" width="6" height="1" fill="#3aa090"/>
   <rect x="64" y="38" width="2" height="2" fill="#0a1f1c"/>
 
-  <!-- Rear wheel 2 (tandem, back of pair) -->
+  <!-- Rear wheel 2 (tandem, back) -->
   <rect x="76" y="33" width="6" height="1" fill="#3aa090"/>
   <rect x="74" y="34" width="10" height="9" fill="#2a4a45"/>
   <rect x="73" y="36" width="1" height="6" fill="#2a4a45"/>
