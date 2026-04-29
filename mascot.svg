@@ -1,4 +1,4 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 96 48" shape-rendering="crispEdges" aria-label="The InfoDump dump truck mascot">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 -4 96 52" shape-rendering="crispEdges" aria-label="The InfoDump dump truck mascot">
   <!-- Cargo bytes flying out of bed -->
   <g fill="#ffbe3c">
     <rect x="44" y="2" width="2" height="2"/>
@@ -12,12 +12,17 @@
     <rect x="74" y="2" width="2" height="2"/>
   </g>
 
-  <!-- Smoke puffs (above smokestack) -->
-  <g fill="#666">
-    <rect x="22" y="0" width="2" height="2"/>
+  <!-- Smoke as 1s and 0s rising from smokestack -->
+  <!-- "0" digit: 3x3 hollow square -->
+  <g fill="#50d2be">
+    <rect x="19" y="-3" width="3" height="1"/>
+    <rect x="19" y="-2" width="1" height="1"/>
+    <rect x="21" y="-2" width="1" height="1"/>
+    <rect x="19" y="-1" width="3" height="1"/>
   </g>
-  <g fill="#444">
-    <rect x="20" y="0" width="2" height="2"/>
+  <!-- "1" digit: 1x3 vertical line -->
+  <g fill="#ffbe3c">
+    <rect x="24" y="-3" width="1" height="3"/>
   </g>
 
   <!-- Cargo pile peeking above bed wall -->
@@ -78,7 +83,7 @@
   <!-- Chassis -->
   <rect x="4" y="32" width="86" height="2" fill="#0a1f1c"/>
 
-  <!-- SMOKESTACK (drawn after cab so it sits on top) -->
+  <!-- SMOKESTACK -->
   <rect x="21" y="2" width="4" height="2" fill="#0a1f1c"/>
   <rect x="21" y="2" width="4" height="1" fill="#1a3d38"/>
   <rect x="22" y="4" width="2" height="10" fill="#1a3d38"/>
@@ -108,7 +113,7 @@
   <rect x="14" y="41" width="6" height="1" fill="#3aa090"/>
   <rect x="16" y="38" width="2" height="2" fill="#0a1f1c"/>
 
-  <!-- Rear wheel 1 (tandem, front) -->
+  <!-- Rear wheel 1 -->
   <rect x="62" y="33" width="6" height="1" fill="#3aa090"/>
   <rect x="60" y="34" width="10" height="9" fill="#2a4a45"/>
   <rect x="59" y="36" width="1" height="6" fill="#2a4a45"/>
@@ -120,7 +125,7 @@
   <rect x="62" y="41" width="6" height="1" fill="#3aa090"/>
   <rect x="64" y="38" width="2" height="2" fill="#0a1f1c"/>
 
-  <!-- Rear wheel 2 (tandem, back) -->
+  <!-- Rear wheel 2 -->
   <rect x="76" y="33" width="6" height="1" fill="#3aa090"/>
   <rect x="74" y="34" width="10" height="9" fill="#2a4a45"/>
   <rect x="73" y="36" width="1" height="6" fill="#2a4a45"/>
