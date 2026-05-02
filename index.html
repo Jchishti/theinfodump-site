@@ -288,6 +288,166 @@
     .about p:last-child { margin-bottom: 0; }
     .about strong { color: rgba(255,255,255,0.85); font-weight: 600; }
 
+    /* Founder */
+    .founder {
+      max-width: 720px;
+      margin: 0 auto;
+      padding: 0 20px 40px;
+    }
+    .founder-card {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 24px;
+      padding: 40px;
+      display: flex;
+      gap: 28px;
+      align-items: flex-start;
+    }
+    .founder-portrait {
+      width: 96px;
+      height: 96px;
+      border-radius: 20px;
+      background: linear-gradient(135deg, #0e1f1c, #1a3d38);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 36px;
+      font-weight: 800;
+      letter-spacing: -1px;
+      color: var(--teal);
+      flex-shrink: 0;
+      box-shadow: 0 0 24px rgba(80, 210, 190, 0.15);
+      border: 1px solid rgba(80, 210, 190, 0.2);
+    }
+    .founder-body { flex: 1; min-width: 0; }
+    .founder-body h2 {
+      font-size: 28px;
+      font-weight: 800;
+      letter-spacing: -0.5px;
+      margin: 8px 0 6px;
+    }
+    .founder-role {
+      font-size: 14px;
+      color: var(--teal);
+      margin-bottom: 16px;
+      font-weight: 600;
+    }
+    .founder p {
+      font-size: 16px;
+      color: var(--muted);
+      margin-bottom: 14px;
+    }
+    .founder p:last-of-type { margin-bottom: 0; }
+    .founder strong { color: rgba(255,255,255,0.85); font-weight: 600; }
+    .founder-links {
+      display: flex;
+      gap: 20px;
+      margin-top: 20px;
+      flex-wrap: wrap;
+    }
+    .founder-links a {
+      font-size: 13px;
+      font-weight: 600;
+      color: var(--teal);
+    }
+    .founder-links a::after {
+      content: " →";
+      transition: transform 0.2s ease;
+      display: inline-block;
+    }
+    .founder-links a:hover::after { transform: translateX(3px); }
+
+    /* Contact (carrier pigeon) */
+    .contact {
+      max-width: 720px;
+      margin: 0 auto;
+      padding: 0 20px 60px;
+    }
+    .contact-card {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 24px;
+      padding: 36px 40px;
+      display: flex;
+      align-items: center;
+      gap: 32px;
+    }
+    .contact-pigeon {
+      width: 160px;
+      height: auto;
+      flex-shrink: 0;
+      image-rendering: pixelated;
+      image-rendering: -moz-crisp-edges;
+      image-rendering: crisp-edges;
+      animation: pigeon-bob 2.4s ease-in-out infinite;
+      filter: drop-shadow(0 4px 0 rgba(80, 210, 190, 0.06));
+    }
+    .contact-pigeon .wing {
+      transform-origin: 12px 8px;
+      transform-box: fill-box;
+      animation: pigeon-flap 0.7s ease-in-out infinite alternate;
+    }
+    .contact-pigeon .envelope {
+      transform-origin: 12px 15px;
+      transform-box: fill-box;
+      animation: envelope-sway 1.8s ease-in-out infinite;
+    }
+    @keyframes pigeon-bob {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-3px); }
+    }
+    @keyframes pigeon-flap {
+      0%   { transform: translateY(0) rotate(0deg); }
+      100% { transform: translateY(-1px) rotate(-4deg); }
+    }
+    @keyframes envelope-sway {
+      0%, 100% { transform: rotate(-3deg); }
+      50%      { transform: rotate(3deg); }
+    }
+    @media (prefers-reduced-motion: reduce) {
+      .contact-pigeon,
+      .contact-pigeon .wing,
+      .contact-pigeon .envelope { animation: none; }
+    }
+    .contact-body { flex: 1; min-width: 0; }
+    .contact-body .section-label { display: block; margin-bottom: 8px; }
+    .contact-body h2 {
+      font-size: 28px;
+      font-weight: 800;
+      letter-spacing: -0.5px;
+      margin-bottom: 10px;
+    }
+    .contact-body h2 .accent { color: var(--teal); }
+    .contact-body p {
+      font-size: 15px;
+      color: var(--muted);
+      margin-bottom: 18px;
+    }
+    .contact-cta {
+      display: inline-block;
+      padding: 12px 22px;
+      background: var(--teal);
+      color: #0a1f1c;
+      border-radius: 12px;
+      font-weight: 700;
+      font-size: 14px;
+      letter-spacing: 0.3px;
+      transition: transform 0.15s ease, box-shadow 0.15s ease, opacity 0.15s ease;
+      box-shadow: 0 0 24px rgba(80, 210, 190, 0.18);
+    }
+    .contact-cta:hover {
+      opacity: 1;
+      transform: translateY(-1px);
+      box-shadow: 0 0 30px rgba(80, 210, 190, 0.32);
+    }
+    .contact-fallback {
+      display: block;
+      margin-top: 12px;
+      font-size: 12px;
+      color: var(--faint);
+    }
+    .contact-fallback a { color: var(--muted); }
+
     /* Footer */
     footer {
       text-align: center;
@@ -315,6 +475,25 @@
       .hero .tagline { font-size: 16px; }
       .about-content { padding: 28px; }
       .about h2 { font-size: 24px; }
+      .founder-card {
+        flex-direction: column;
+        padding: 28px;
+        gap: 20px;
+      }
+      .founder-portrait {
+        width: 72px;
+        height: 72px;
+        font-size: 28px;
+      }
+      .founder-body h2 { font-size: 24px; }
+      .contact-card {
+        flex-direction: column;
+        padding: 28px;
+        text-align: center;
+        gap: 20px;
+      }
+      .contact-pigeon { width: 128px; }
+      .contact-body h2 { font-size: 24px; }
     }
   </style>
 </head>
@@ -679,13 +858,131 @@
         <p>If that sounds like your speed, <a href="mailto:contact@theinfodump.com">say hi</a>.</p>
       </div>
     </section>
+
+    <section class="founder" id="founder">
+      <div class="founder-card">
+        <div class="founder-portrait" aria-hidden="true">JC</div>
+        <div class="founder-body">
+          <span class="section-label">Founder</span>
+          <h2>Jamal Chishti</h2>
+          <p class="founder-role">Builder, designer, and the reason you can't get him to shut up about software.</p>
+          <p>The InfoDump is a one-person studio out of Oregon. Jamal built <strong>Linear Timer+</strong> because he needed it, then kept building it because other people said they did too. He has ADHD, strong opinions about typography, and a pile of half-formed project ideas that — eventually — will end up on this page as real things you can use.</p>
+          <p>He believes software should be <strong>useful, honest, and quiet</strong>: no tracking, no ads, no dark patterns. If a tool can't earn its keep without those, it shouldn't exist.</p>
+          <div class="founder-links">
+            <a href="mailto:contact@theinfodump.com">Email</a>
+            <a href="https://github.com/Jchishti" target="_blank" rel="noopener">GitHub</a>
+            <a href="https://lineartimer.com" target="_blank" rel="noopener">Linear Timer+</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="contact" id="contact">
+      <div class="contact-card">
+        <svg class="contact-pigeon" viewBox="0 0 24 18" xmlns="http://www.w3.org/2000/svg" shape-rendering="crispEdges" aria-label="A pixel-art carrier pigeon delivering an envelope">
+          <!-- WING (raised, animated) -->
+          <g class="wing">
+            <!-- Outline (dark slate) -->
+            <rect x="10" y="0" width="2" height="1" fill="#3a4a52"/>
+            <rect x="9"  y="1" width="1" height="1" fill="#3a4a52"/>
+            <rect x="12" y="1" width="1" height="1" fill="#3a4a52"/>
+            <rect x="8"  y="2" width="1" height="1" fill="#3a4a52"/>
+            <rect x="13" y="2" width="1" height="1" fill="#3a4a52"/>
+            <rect x="7"  y="3" width="1" height="1" fill="#3a4a52"/>
+            <rect x="14" y="3" width="1" height="1" fill="#3a4a52"/>
+            <rect x="6"  y="4" width="1" height="1" fill="#3a4a52"/>
+            <rect x="14" y="4" width="1" height="1" fill="#3a4a52"/>
+            <rect x="5"  y="5" width="1" height="1" fill="#3a4a52"/>
+            <rect x="15" y="5" width="1" height="1" fill="#3a4a52"/>
+            <rect x="6"  y="6" width="1" height="1" fill="#3a4a52"/>
+            <rect x="15" y="6" width="2" height="1" fill="#3a4a52"/>
+            <rect x="7"  y="7" width="1" height="1" fill="#3a4a52"/>
+            <rect x="14" y="7" width="4" height="1" fill="#3a4a52"/>
+            <!-- Mid slate (mid tone) -->
+            <rect x="10" y="1" width="2" height="1" fill="#5a6a72"/>
+            <rect x="9"  y="2" width="1" height="1" fill="#5a6a72"/>
+            <rect x="12" y="2" width="1" height="1" fill="#5a6a72"/>
+            <rect x="8"  y="3" width="1" height="1" fill="#5a6a72"/>
+            <rect x="13" y="3" width="1" height="1" fill="#5a6a72"/>
+            <rect x="7"  y="4" width="1" height="1" fill="#5a6a72"/>
+            <rect x="13" y="4" width="1" height="1" fill="#5a6a72"/>
+            <rect x="6"  y="5" width="1" height="1" fill="#5a6a72"/>
+            <rect x="13" y="5" width="2" height="1" fill="#5a6a72"/>
+            <rect x="7"  y="6" width="1" height="1" fill="#5a6a72"/>
+            <rect x="13" y="6" width="2" height="1" fill="#5a6a72"/>
+            <rect x="8"  y="7" width="1" height="1" fill="#5a6a72"/>
+            <rect x="12" y="7" width="2" height="1" fill="#5a6a72"/>
+            <!-- Light slate (highlight) -->
+            <rect x="10" y="2" width="2" height="1" fill="#8a9aa0"/>
+            <rect x="9"  y="3" width="4" height="1" fill="#8a9aa0"/>
+            <rect x="8"  y="4" width="5" height="1" fill="#8a9aa0"/>
+            <rect x="7"  y="5" width="6" height="1" fill="#8a9aa0"/>
+            <rect x="8"  y="6" width="5" height="1" fill="#8a9aa0"/>
+            <rect x="9"  y="7" width="3" height="1" fill="#8a9aa0"/>
+          </g>
+          <!-- TAIL + BODY OUTLINE -->
+          <rect x="3"  y="8"  width="5" height="1" fill="#3a4a52"/>
+          <rect x="18" y="8"  width="2" height="1" fill="#3a4a52"/>
+          <rect x="2"  y="9"  width="1" height="1" fill="#3a4a52"/>
+          <rect x="19" y="9"  width="1" height="1" fill="#3a4a52"/>
+          <rect x="0"  y="10" width="2" height="1" fill="#3a4a52"/>
+          <rect x="19" y="10" width="1" height="1" fill="#3a4a52"/>
+          <rect x="0"  y="11" width="1" height="1" fill="#3a4a52"/>
+          <rect x="19" y="11" width="1" height="1" fill="#3a4a52"/>
+          <rect x="1"  y="12" width="1" height="1" fill="#3a4a52"/>
+          <rect x="18" y="12" width="2" height="1" fill="#3a4a52"/>
+          <rect x="2"  y="13" width="2" height="1" fill="#3a4a52"/>
+          <rect x="16" y="13" width="2" height="1" fill="#3a4a52"/>
+          <rect x="4"  y="14" width="3" height="1" fill="#3a4a52"/>
+          <rect x="13" y="14" width="3" height="1" fill="#3a4a52"/>
+          <!-- BODY MID TONE -->
+          <rect x="8"  y="8"  width="1" height="1" fill="#5a6a72"/>
+          <rect x="11" y="8"  width="2" height="1" fill="#5a6a72"/>
+          <rect x="13" y="8"  width="2" height="1" fill="#5a6a72"/>
+          <!-- BODY FILL (light slate) -->
+          <rect x="3"  y="9"  width="16" height="1" fill="#8a9aa0"/>
+          <rect x="2"  y="10" width="13" height="1" fill="#8a9aa0"/>
+          <rect x="17" y="10" width="2"  height="1" fill="#8a9aa0"/>
+          <rect x="1"  y="11" width="18" height="1" fill="#8a9aa0"/>
+          <rect x="2"  y="12" width="16" height="1" fill="#8a9aa0"/>
+          <rect x="4"  y="13" width="12" height="1" fill="#8a9aa0"/>
+          <rect x="7"  y="14" width="6"  height="1" fill="#8a9aa0"/>
+          <!-- HEAD MID TONE (back of neck shading) -->
+          <rect x="15" y="8" width="3" height="1" fill="#5a6a72"/>
+          <!-- EYE -->
+          <rect x="15" y="10" width="1" height="1" fill="#0a1f1c"/>
+          <rect x="16" y="10" width="1" height="1" fill="#fff5cc"/>
+          <!-- BEAK (amber) -->
+          <rect x="20" y="10" width="2" height="1" fill="#d99a30"/>
+          <rect x="20" y="11" width="2" height="1" fill="#ffbe3c"/>
+          <!-- ENVELOPE in feet, animated sway -->
+          <g class="envelope">
+            <rect x="9"  y="15" width="6" height="1" fill="#ffbe3c"/>
+            <rect x="9"  y="16" width="1" height="1" fill="#ffbe3c"/>
+            <rect x="14" y="16" width="1" height="1" fill="#ffbe3c"/>
+            <rect x="10" y="16" width="4" height="1" fill="#d99a30"/>
+            <rect x="9"  y="17" width="6" height="1" fill="#ffbe3c"/>
+            <!-- Envelope flap line (thin teal seal) -->
+            <rect x="11" y="16" width="2" height="1" fill="#50d2be"/>
+          </g>
+        </svg>
+        <div class="contact-body">
+          <span class="section-label">Contact</span>
+          <h2>Send <span class="accent">word</span>.</h2>
+          <p>We don't have a mailbox. We have a pigeon. He's reliable, mostly. Tell him what you need and he'll come find us.</p>
+          <a class="contact-cta" href="mailto:contact@theinfodump.com">Send the pigeon →</a>
+          <span class="contact-fallback">Or, if pigeon-mail is too whimsical: <a href="mailto:contact@theinfodump.com">contact@theinfodump.com</a></span>
+        </div>
+      </div>
+    </section>
   </main>
 
   <footer>
     <div class="links">
       <a href="#projects">Projects</a>
       <a href="#about">About</a>
-      <a href="mailto:contact@theinfodump.com">Contact</a>
+      <a href="#founder">Founder</a>
+      <a href="#contact">Contact</a>
       <a href="https://lineartimer.com" target="_blank" rel="noopener">Linear Timer+</a>
     </div>
     <p class="copy">
