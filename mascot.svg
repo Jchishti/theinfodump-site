@@ -1,4 +1,6 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 -4 96 52" shape-rendering="crispEdges" aria-label="The InfoDump dump truck mascot">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 -4 152 54" shape-rendering="crispEdges" aria-label="The InfoDump: a dump truck delivering to a pile of projects, with Linear Timer prominently featured">
+  <!-- ============ TRUCK (left side, x=0-92) ============ -->
+
   <!-- Cargo bytes flying out of bed -->
   <g fill="#ffbe3c">
     <rect x="44" y="2" width="2" height="2"/>
@@ -12,15 +14,13 @@
     <rect x="74" y="2" width="2" height="2"/>
   </g>
 
-  <!-- Smoke as 1s and 0s rising from smokestack -->
-  <!-- "0" digit: 3x3 hollow square -->
+  <!-- Smoke as 1s and 0s -->
   <g fill="#50d2be">
     <rect x="19" y="-3" width="3" height="1"/>
     <rect x="19" y="-2" width="1" height="1"/>
     <rect x="21" y="-2" width="1" height="1"/>
     <rect x="19" y="-1" width="3" height="1"/>
   </g>
-  <!-- "1" digit: 1x3 vertical line -->
   <g fill="#ffbe3c">
     <rect x="24" y="-3" width="1" height="3"/>
   </g>
@@ -83,13 +83,13 @@
   <!-- Chassis -->
   <rect x="4" y="32" width="86" height="2" fill="#0a1f1c"/>
 
-  <!-- SMOKESTACK -->
+  <!-- Smokestack -->
   <rect x="21" y="2" width="4" height="2" fill="#0a1f1c"/>
   <rect x="21" y="2" width="4" height="1" fill="#1a3d38"/>
   <rect x="22" y="4" width="2" height="10" fill="#1a3d38"/>
   <rect x="22" y="4" width="1" height="10" fill="#3aa090"/>
 
-  <!-- BED HEADBOARD (overhangs cab) -->
+  <!-- Bed headboard (overhangs cab) -->
   <rect x="28" y="4" width="12" height="8" fill="#0a1f1c"/>
   <rect x="30" y="6" width="8" height="4" fill="#50d2be"/>
   <rect x="30" y="6" width="8" height="1" fill="#7fe8d6"/>
@@ -136,4 +136,60 @@
   <rect x="76" y="36" width="6" height="1" fill="#7fe8d6"/>
   <rect x="76" y="41" width="6" height="1" fill="#3aa090"/>
   <rect x="78" y="38" width="2" height="2" fill="#0a1f1c"/>
+
+  <!-- ============ THE INFODUMP PILE (right side, x=98-152) ============ -->
+
+  <!-- Pile base (broad bottom layer) -->
+  <rect x="98" y="40" width="54" height="4" fill="#0a1f1c"/>
+  <rect x="98" y="40" width="54" height="2" fill="#3aa090"/>
+  <rect x="98" y="40" width="54" height="1" fill="#50d2be"/>
+
+  <!-- Pile mid layer -->
+  <rect x="104" y="32" width="42" height="8" fill="#0a1f1c"/>
+  <rect x="106" y="34" width="38" height="6" fill="#3aa090"/>
+  <rect x="106" y="34" width="38" height="1" fill="#50d2be"/>
+
+  <!-- Pile upper layer -->
+  <rect x="112" y="26" width="30" height="6" fill="#0a1f1c"/>
+  <rect x="114" y="28" width="26" height="4" fill="#50d2be"/>
+  <rect x="114" y="28" width="26" height="1" fill="#7fe8d6"/>
+
+  <!-- "Land" 1 — Linear Timer+ (prominent on the pile, like a level marker) -->
+  <!-- Black background tile -->
+  <rect x="118" y="18" width="10" height="10" fill="#0a1f1c"/>
+  <!-- Amber timer ring (top arc) -->
+  <rect x="120" y="18" width="6" height="1" fill="#ffbe3c"/>
+  <rect x="119" y="19" width="1" height="1" fill="#ffbe3c"/>
+  <rect x="126" y="19" width="1" height="1" fill="#ffbe3c"/>
+  <!-- Amber timer ring (sides) -->
+  <rect x="118" y="20" width="1" height="4" fill="#ffbe3c"/>
+  <rect x="127" y="20" width="1" height="4" fill="#ffbe3c"/>
+  <!-- Amber timer ring (bottom arc) -->
+  <rect x="119" y="24" width="1" height="1" fill="#ffbe3c"/>
+  <rect x="126" y="24" width="1" height="1" fill="#ffbe3c"/>
+  <rect x="120" y="25" width="6" height="1" fill="#ffbe3c"/>
+  <!-- Amber timer center dot -->
+  <rect x="122" y="22" width="2" height="2" fill="#ffbe3c"/>
+  <!-- Glow under the icon -->
+  <rect x="116" y="27" width="14" height="1" fill="#3aa090"/>
+
+  <!-- Mystery silhouettes (future projects, dim) -->
+  <!-- Small mystery box on left side of pile -->
+  <rect x="104" y="36" width="4" height="4" fill="#1a3d38"/>
+  <rect x="105" y="37" width="2" height="2" fill="#2a4a45"/>
+  <!-- Small mystery box on right side of pile -->
+  <rect x="142" y="36" width="4" height="4" fill="#1a3d38"/>
+  <rect x="143" y="37" width="2" height="2" fill="#2a4a45"/>
+  <!-- Bigger mystery (peeking above mid layer) -->
+  <rect x="108" y="28" width="4" height="4" fill="#1a3d38"/>
+  <rect x="138" y="28" width="4" height="4" fill="#1a3d38"/>
+
+  <!-- ============ GROUND LINE ============ -->
+  <rect x="0" y="45" width="152" height="2" fill="#1a3d38"/>
+  <rect x="0" y="45" width="152" height="1" fill="#3aa090"/>
+  <!-- Subtle ground texture (small pebbles/dashes) -->
+  <rect x="36" y="47" width="2" height="1" fill="#1a3d38"/>
+  <rect x="56" y="47" width="2" height="1" fill="#1a3d38"/>
+  <rect x="92" y="47" width="3" height="1" fill="#1a3d38"/>
+  <rect x="120" y="47" width="2" height="1" fill="#1a3d38"/>
 </svg>
