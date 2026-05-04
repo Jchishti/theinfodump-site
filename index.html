@@ -448,6 +448,88 @@
     }
     .contact-fallback a { color: var(--muted); }
 
+    /* Beta signup */
+    .beta {
+      max-width: 720px;
+      margin: 0 auto;
+      padding: 0 20px 60px;
+    }
+    .beta-card {
+      background: var(--card);
+      border: 1px solid rgba(255,190,60,0.2);
+      border-radius: 24px;
+      padding: 40px;
+      box-shadow: 0 0 40px rgba(255,190,60,0.04);
+    }
+    .beta-card h2 {
+      font-size: 28px;
+      font-weight: 800;
+      letter-spacing: -0.5px;
+      margin-bottom: 12px;
+    }
+    .beta-card h2 .accent { color: var(--amber); text-shadow: 0 0 30px rgba(255,190,60,0.3); }
+    .beta-card .beta-sub {
+      font-size: 16px;
+      color: var(--muted);
+      margin-bottom: 28px;
+      line-height: 1.6;
+    }
+    .beta-card .beta-sub strong { color: rgba(255,255,255,0.85); font-weight: 600; }
+    .beta-form {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+    .beta-form-row {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 12px;
+    }
+    .beta-form input {
+      width: 100%;
+      background: rgba(255,255,255,0.05);
+      border: 1px solid rgba(255,255,255,0.1);
+      border-radius: 12px;
+      padding: 12px 16px;
+      color: #fff;
+      font-size: 15px;
+      font-family: inherit;
+      outline: none;
+      transition: border-color 0.2s;
+    }
+    .beta-form input::placeholder { color: rgba(255,255,255,0.3); }
+    .beta-form input:focus { border-color: rgba(255,190,60,0.5); }
+    .beta-form button {
+      align-self: flex-start;
+      padding: 12px 24px;
+      background: var(--amber);
+      color: #1a0f00;
+      border: none;
+      border-radius: 12px;
+      font-weight: 700;
+      font-size: 14px;
+      font-family: inherit;
+      cursor: pointer;
+      letter-spacing: 0.3px;
+      transition: transform 0.15s ease, box-shadow 0.15s ease;
+      box-shadow: 0 0 24px rgba(255,190,60,0.2);
+    }
+    .beta-form button:hover {
+      transform: translateY(-1px);
+      box-shadow: 0 0 32px rgba(255,190,60,0.35);
+    }
+    .beta-note {
+      margin-top: 14px;
+      font-size: 12px;
+      color: rgba(255,255,255,0.3);
+    }
+    @media (max-width: 600px) {
+      .beta-card { padding: 28px; }
+      .beta-card h2 { font-size: 24px; }
+      .beta-form-row { grid-template-columns: 1fr; }
+      .beta-form button { align-self: stretch; text-align: center; }
+    }
+
     /* Footer */
     footer {
       text-align: center;
@@ -877,6 +959,24 @@
       </div>
     </section>
 
+    <section class="beta" id="android-beta">
+      <div class="beta-card">
+        <span class="section-label" style="display:block;margin-bottom:10px;">Android</span>
+        <h2>Want <span class="accent">"Android Beta Tester"</span> on your resume?</h2>
+        <p class="beta-sub">Linear Timer+ is coming to Android. Before it ships, it needs real people using it on real devices — not just a simulator running in a dark room at 2 AM.<br><br>Sign up and you'll get early access, a direct line to report bugs, and yes — you can absolutely put <strong>Android Beta Tester</strong> on your resume. We won't tell anyone how easy it was to get in.</p>
+        <form class="beta-form" action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
+          <div class="beta-form-row">
+            <input type="text" name="first_name" placeholder="First name" required autocomplete="given-name">
+            <input type="text" name="last_name" placeholder="Last name" required autocomplete="family-name">
+          </div>
+          <input type="email" name="email" placeholder="Email address" required autocomplete="email">
+          <input type="hidden" name="_subject" value="New Android Beta Tester Signup">
+          <button type="submit">Sign me up →</button>
+        </form>
+        <p class="beta-note">No spam. No newsletter. Just an email when it's time to test.</p>
+      </div>
+    </section>
+
     <section class="contact" id="contact">
       <div class="contact-card">
         <svg class="contact-pigeon" viewBox="0 0 24 18" xmlns="http://www.w3.org/2000/svg" shape-rendering="crispEdges" aria-label="A pixel-art carrier pigeon delivering an envelope">
@@ -982,6 +1082,7 @@
       <a href="#projects">Projects</a>
       <a href="#about">About</a>
       <a href="#founder">Founder</a>
+      <a href="#android-beta">Android Beta</a>
       <a href="#contact">Contact</a>
       <a href="https://lineartimer.com" target="_blank" rel="noopener">Linear Timer+</a>
     </div>
