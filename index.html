@@ -181,11 +181,42 @@
       transform: translateY(-2px);
       text-decoration: none;
     }
-    .project-card.live { cursor: pointer; }
     .project-card.placeholder {
       background: transparent;
       border-style: dashed;
       opacity: 0.55;
+    }
+
+    /* Footer with "Visit X" link + App Store badge, side by side. */
+    .project-card-footer {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+      margin-top: auto;
+      flex-wrap: wrap;
+    }
+    .app-store-badge {
+      display: inline-block;
+      line-height: 0;
+      border-bottom: none;
+      transition: opacity 0.15s ease, transform 0.15s ease;
+    }
+    .app-store-badge:hover {
+      opacity: 0.85;
+      transform: translateY(-1px);
+    }
+    .app-store-badge img {
+      height: 40px;
+      width: auto;
+      display: block;
+    }
+
+    /* Mobile: promote Let's Play Shop (newest launch) to top of the grid. */
+    @media (max-width: 700px) {
+      .project-grid > .project-card--lps {
+        order: -1;
+      }
     }
 
     .project-head {
@@ -922,7 +953,7 @@
       </div>
 
       <div class="project-grid">
-        <a href="https://lineartimer.com" class="project-card live" target="_blank" rel="noopener">
+        <article class="project-card live">
           <div class="project-head">
             <div class="project-icon linear-timer"></div>
             <div>
@@ -931,10 +962,15 @@
             </div>
           </div>
           <p class="project-desc">A beautifully minimal interval timer with Pomodoro, presets, scheduling, and break reminders. iOS, Chrome, Android.</p>
-          <span class="project-link">Visit lineartimer.com</span>
-        </a>
+          <div class="project-card-footer">
+            <a class="project-link" href="https://lineartimer.com" target="_blank" rel="noopener">Visit lineartimer.com</a>
+            <a class="app-store-badge" href="https://apps.apple.com/app/linear-timer/id6762091109" target="_blank" rel="noopener" aria-label="Download Linear Timer+ on the App Store">
+              <img src="app-store-badge.svg" alt="Download on the App Store" width="120" height="40" />
+            </a>
+          </div>
+        </article>
 
-        <a href="https://exploretheflags.com" class="project-card live" target="_blank" rel="noopener">
+        <article class="project-card live">
           <div class="project-head">
             <div class="project-icon" style="background: linear-gradient(135deg, #0a1f3a, #0a2f2a); box-shadow: 0 0 24px rgba(80, 160, 255, 0.15); font-size: 28px;">🌍</div>
             <div>
@@ -943,10 +979,15 @@
             </div>
           </div>
           <p class="project-desc">A geography learning app for kids — 200+ countries, flags, quizzes, maps, oceans, and travel tracking. No ads, no tracking, works offline. Built for an 8-year-old who loves flags.</p>
-          <span class="project-link">Visit exploretheflags.com</span>
-        </a>
+          <div class="project-card-footer">
+            <a class="project-link" href="https://exploretheflags.com" target="_blank" rel="noopener">Visit exploretheflags.com</a>
+            <a class="app-store-badge" href="https://apps.apple.com/us/app/explore-the-flags/id6784823586" target="_blank" rel="noopener" aria-label="Download Explore the Flags on the App Store">
+              <img src="app-store-badge.svg" alt="Download on the App Store" width="120" height="40" />
+            </a>
+          </div>
+        </article>
 
-        <a href="https://letsplayshop.com" class="project-card live" target="_blank" rel="noopener">
+        <article class="project-card live project-card--lps">
           <div class="project-head">
             <div class="project-icon letsplayshop"><img src="letsplayshop-icon.png" alt="" width="56" height="56"></div>
             <div>
@@ -955,8 +996,13 @@
             </div>
           </div>
           <p class="project-desc">A pretend-play POS for iPad and iPhone — 26 hand-crafted shops, real tap-to-pay, and a multi-device tab mode so a phone can join the iPad&rsquo;s register. No ads, no tracking, no accounts. Built for the kid who kept trying to charge me for coffee at my desk.</p>
-          <span class="project-link">Visit letsplayshop.com</span>
-        </a>
+          <div class="project-card-footer">
+            <a class="project-link" href="https://letsplayshop.com" target="_blank" rel="noopener">Visit letsplayshop.com</a>
+            <a class="app-store-badge" href="https://apps.apple.com/us/app/lets-play-shop/id6799304953" target="_blank" rel="noopener" aria-label="Download Let's Play Shop on the App Store">
+              <img src="app-store-badge.svg" alt="Download on the App Store" width="120" height="40" />
+            </a>
+          </div>
+        </article>
 
         <div class="project-card placeholder">
           <div class="project-head">
